@@ -16,6 +16,7 @@ class WeatherViewController: UIViewController {
     
     
     @IBAction func searchPressed(_ sender: UIButton) {
+        print("Hello")
     }
     
     @IBAction func locationPressed(_ sender: UIButton) {
