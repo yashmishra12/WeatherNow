@@ -11,6 +11,7 @@ struct WeatherModel {
     let conditionId: Int
     let cityName: String
     let temperature: Double
+    let desc: String
     
     var temperatureString: String {
         return String(format: "%.1f", temperature)
@@ -29,7 +30,7 @@ struct WeatherModel {
         case 701...781:
             return "cloud.fog"
         case 800:
-            return "cloud.bolt"
+            return "sun.min"
         default:
             return "cloud"
             

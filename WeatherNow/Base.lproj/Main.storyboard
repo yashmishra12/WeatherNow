@@ -23,8 +23,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pFU-zu-ngp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pFU-zu-ngp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-L2-q0R" userLabel="locationButton">
                                 <rect key="frame" x="21" y="65.5" width="34" height="33"/>
@@ -44,7 +45,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-AZ-plt" userLabel="searchBar">
                                 <rect key="frame" x="65" y="65" width="284" height="34"/>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
-                                <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="textFieldText"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -84,32 +85,42 @@
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-YK-H7k" userLabel="descLabel">
+                                <rect key="frame" x="21" y="435.5" width="372" height="27"/>
+                                <fontDescription key="fontDescription" name=".SFUI-RegularItalic" family=".AppleSystemUIFont" pointSize="24"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="top" secondItem="aae-07-U1M" secondAttribute="bottom" constant="20" id="0SD-VW-Ckp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJN-YK-H7k" secondAttribute="trailing" constant="21" id="2YC-qa-9LI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLQ-oy-Nl3" secondAttribute="trailing" constant="21" id="98Z-iH-HLw"/>
                             <constraint firstItem="aae-07-U1M" firstAttribute="top" secondItem="gBD-8M-Rla" secondAttribute="bottom" constant="8" id="9pB-NQ-3NJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aae-07-U1M" secondAttribute="trailing" constant="21" id="Bks-PM-AzM"/>
                             <constraint firstItem="hLQ-oy-Nl3" firstAttribute="top" secondItem="7pe-AZ-plt" secondAttribute="bottom" constant="34" id="CRH-sj-qhm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5t-aE-vsp" secondAttribute="trailing" constant="21" id="Dcr-vY-79c"/>
                             <constraint firstItem="jnQ-L2-q0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="EvO-Nv-CIm"/>
-                            <constraint firstItem="pFU-zu-ngp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fai-M7-5Xs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJN-YK-H7k" secondAttribute="trailing" constant="21" id="IGi-yS-NLL"/>
                             <constraint firstItem="7pe-AZ-plt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="LH0-AH-hhm"/>
                             <constraint firstItem="k5t-aE-vsp" firstAttribute="leading" secondItem="7pe-AZ-plt" secondAttribute="trailing" constant="10" id="MK2-bC-hhi"/>
                             <constraint firstItem="k5t-aE-vsp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="P4u-Wv-LjK"/>
                             <constraint firstItem="aae-07-U1M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="SQn-0f-Ldf"/>
-                            <constraint firstAttribute="bottom" secondItem="pFU-zu-ngp" secondAttribute="bottom" id="TPc-32-3zR"/>
                             <constraint firstItem="jnQ-L2-q0R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="XSs-QX-QOR"/>
                             <constraint firstItem="7pe-AZ-plt" firstAttribute="leading" secondItem="jnQ-L2-q0R" secondAttribute="trailing" constant="10" id="Xsd-pc-FHY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBD-8M-Rla" secondAttribute="trailing" constant="21" id="aJv-an-jiH"/>
-                            <constraint firstItem="pFU-zu-ngp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ghl-Jj-vTv"/>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNr-ku-SaX"/>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="f8b-ys-z4A"/>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="hAi-P9-8G5"/>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="top" secondItem="aae-07-U1M" secondAttribute="bottom" constant="72" id="mhZ-aO-sFi"/>
                             <constraint firstItem="gBD-8M-Rla" firstAttribute="top" secondItem="hLQ-oy-Nl3" secondAttribute="bottom" constant="2" id="pVj-OQ-hc9"/>
-                            <constraint firstItem="pFU-zu-ngp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r2t-dO-Dqy"/>
                             <constraint firstItem="hLQ-oy-Nl3" firstAttribute="top" secondItem="k5t-aE-vsp" secondAttribute="bottom" constant="34" id="ryj-K9-7fr"/>
                             <constraint firstItem="gBD-8M-Rla" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="xQ2-Hk-kfw"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="descLabel" destination="yJN-YK-H7k" id="mZ3-1E-ai0"/>
                         <outlet property="locationLabel" destination="aae-07-U1M" id="Je1-JT-Lic"/>
                         <outlet property="searchField" destination="7pe-AZ-plt" id="cfT-Ji-e8U"/>
                         <outlet property="tempLabel" destination="gBD-8M-Rla" id="8AX-vq-iel"/>
@@ -128,6 +139,9 @@
         <image name="sun.min" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textFieldText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
