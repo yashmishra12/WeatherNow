@@ -1,24 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="TimesNewRoman.ttf">
+            <string>.SFUI-RegularItalic</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="WeatherNow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="pFU-zu-ngp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnQ-L2-q0R" userLabel="locationButton">
+                                <rect key="frame" x="21" y="65.5" width="34" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Vam-3v-reQ"/>
+                                    <constraint firstAttribute="width" constant="34" id="jsE-S0-xdr"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="location.circle.fill" catalog="system">
+                                    <color key="titleColor" red="0.5576078995" green="0.96611279250000004" blue="0.40307597579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DnP-4T-NGW"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pe-AZ-plt" userLabel="searchBar">
+                                <rect key="frame" x="65" y="65" width="284" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.min" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hLQ-oy-Nl3" userLabel="weatherImage">
+                                <rect key="frame" x="243" y="133.5" width="150" height="149"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6H9-lC-Ggq"/>
+                                    <constraint firstAttribute="width" constant="150" id="mPQ-UO-dWH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="31.3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBD-8M-Rla" userLabel="tempLabel">
+                                <rect key="frame" x="247.5" y="285" width="145.5" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5t-aE-vsp" userLabel="searchButton">
+                                <rect key="frame" x="359" y="65.5" width="34" height="33"/>
+                                <accessibility key="accessibilityConfiguration" label="searchButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Ntf-9K-fnN"/>
+                                    <constraint firstAttribute="height" constant="34" id="zf3-cY-S6D"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="magnifyingglass.circle.fill" catalog="system">
+                                    <color key="titleColor" red="0.5576078995" green="0.96611279250000004" blue="0.40307597579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2KS-dz-J46"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raleigh" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aae-07-U1M" userLabel="cityLabel">
+                                <rect key="frame" x="318" y="388.5" width="75" height="27"/>
+                                <fontDescription key="fontDescription" name=".SFUI-RegularItalic" family=".AppleSystemUIFont" pointSize="24"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLQ-oy-Nl3" secondAttribute="trailing" constant="21" id="98Z-iH-HLw"/>
+                            <constraint firstItem="aae-07-U1M" firstAttribute="top" secondItem="gBD-8M-Rla" secondAttribute="bottom" constant="8" id="9pB-NQ-3NJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aae-07-U1M" secondAttribute="trailing" constant="21" id="Bks-PM-AzM"/>
+                            <constraint firstItem="hLQ-oy-Nl3" firstAttribute="top" secondItem="7pe-AZ-plt" secondAttribute="bottom" constant="34" id="CRH-sj-qhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5t-aE-vsp" secondAttribute="trailing" constant="21" id="Dcr-vY-79c"/>
+                            <constraint firstItem="jnQ-L2-q0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="EvO-Nv-CIm"/>
+                            <constraint firstItem="pFU-zu-ngp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Fai-M7-5Xs"/>
+                            <constraint firstItem="7pe-AZ-plt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="LH0-AH-hhm"/>
+                            <constraint firstItem="k5t-aE-vsp" firstAttribute="leading" secondItem="7pe-AZ-plt" secondAttribute="trailing" constant="10" id="MK2-bC-hhi"/>
+                            <constraint firstItem="k5t-aE-vsp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="P4u-Wv-LjK"/>
+                            <constraint firstItem="aae-07-U1M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="SQn-0f-Ldf"/>
+                            <constraint firstAttribute="bottom" secondItem="pFU-zu-ngp" secondAttribute="bottom" id="TPc-32-3zR"/>
+                            <constraint firstItem="jnQ-L2-q0R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="XSs-QX-QOR"/>
+                            <constraint firstItem="7pe-AZ-plt" firstAttribute="leading" secondItem="jnQ-L2-q0R" secondAttribute="trailing" constant="10" id="Xsd-pc-FHY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBD-8M-Rla" secondAttribute="trailing" constant="21" id="aJv-an-jiH"/>
+                            <constraint firstItem="pFU-zu-ngp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ghl-Jj-vTv"/>
+                            <constraint firstItem="gBD-8M-Rla" firstAttribute="top" secondItem="hLQ-oy-Nl3" secondAttribute="bottom" constant="2" id="pVj-OQ-hc9"/>
+                            <constraint firstItem="pFU-zu-ngp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="r2t-dO-Dqy"/>
+                            <constraint firstItem="hLQ-oy-Nl3" firstAttribute="top" secondItem="k5t-aE-vsp" secondAttribute="bottom" constant="34" id="ryj-K9-7fr"/>
+                            <constraint firstItem="gBD-8M-Rla" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="xQ2-Hk-kfw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="aae-07-U1M" id="Je1-JT-Lic"/>
+                        <outlet property="searchField" destination="7pe-AZ-plt" id="cfT-Ji-e8U"/>
+                        <outlet property="tempLabel" destination="gBD-8M-Rla" id="8AX-vq-iel"/>
+                        <outlet property="weatherImage" destination="hLQ-oy-Nl3" id="fam-26-c8h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="1000" height="666.66668701171875"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="sun.min" catalog="system" width="128" height="121"/>
+        <namedColor name="AccentColor">
+            <color red="0.12941176470588237" green="0.12941176470588237" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
