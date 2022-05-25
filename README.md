@@ -10,6 +10,12 @@ User can enter their favorite location and get its temperature in Celsius. The a
 https://openweathermap.org/api
 
 ## Screenshot
-
-<img src="readmeImage/darkMode.png" height="50%"> 
-<img src="readmeImage/lightMode.png" height="50%"> 
+<div>
+  
+<span>
+  <img src="readmeImage/darkMode.png" height="800"> 
+  </span>
+  <span>
+  <img src="readmeImage/lightMode.png" height="800"> 
+  </span>
+  </div>
