@@ -11,5 +11,5 @@ https://openweathermap.org/api
 
 ## Screenshot
 
-<img src="readmeImage/darkMode.png" height="200"> 
-<img src="readmeImage/lightMode.png" height="200"> 
+<img src="readmeImage/darkMode.png" height="50%"> 
+<img src="readmeImage/lightMode.png" height="50%"> 
