@@ -11,6 +11,5 @@ https://openweathermap.org/api
 
 ## Screenshot
 
-![Dark Mode](https://github.com/yashmishra12/WeatherNow/blob/main/readmeImage/darkMode.png)
-
-![Light Mode](https://github.com/yashmishra12/WeatherNow/blob/main/readmeImage/lightMode.png)
+<img src="readmeImage/darkMode.png" height="200"> 
+<img src="readmeImage/lightMode.png" height="200"> 
