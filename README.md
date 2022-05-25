@@ -1,4 +1,4 @@
-<img src="readmeImage/WeatherNowLogo.png" width="20"> 
+<img src="readmeImage/WeatherNowLogo.png" width="200"> 
 
 # WeatherNow
 iOS Weather Application
