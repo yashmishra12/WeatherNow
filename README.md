@@ -1,4 +1,6 @@
-![Dark Mode](https://github.com/yashmishra12/WeatherNow/blob/main/readmeImage/WeatherNowLogo.png=20x20)# WeatherNow
+<img src="readmeImage/WeatherNowLogo.png" width="20"> 
+
+# WeatherNow
 iOS Weather Application
 
 ## Description
