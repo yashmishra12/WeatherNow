@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJN-YK-H7k" userLabel="descLabel">
-                                <rect key="frame" x="21" y="487.5" width="372" height="27"/>
+                                <rect key="frame" x="21" y="435.5" width="372" height="27"/>
                                 <fontDescription key="fontDescription" name=".SFUI-RegularItalic" family=".AppleSystemUIFont" pointSize="24"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
@@ -94,26 +94,22 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
-                            <constraint firstItem="yJN-YK-H7k" firstAttribute="top" secondItem="aae-07-U1M" secondAttribute="bottom" constant="20" id="0SD-VW-Ckp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJN-YK-H7k" secondAttribute="trailing" constant="21" id="2YC-qa-9LI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hLQ-oy-Nl3" secondAttribute="trailing" constant="21" id="98Z-iH-HLw"/>
                             <constraint firstItem="aae-07-U1M" firstAttribute="top" secondItem="gBD-8M-Rla" secondAttribute="bottom" constant="8" id="9pB-NQ-3NJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aae-07-U1M" secondAttribute="trailing" constant="21" id="Bks-PM-AzM"/>
                             <constraint firstItem="hLQ-oy-Nl3" firstAttribute="top" secondItem="7pe-AZ-plt" secondAttribute="bottom" constant="34" id="CRH-sj-qhm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k5t-aE-vsp" secondAttribute="trailing" constant="21" id="Dcr-vY-79c"/>
                             <constraint firstItem="jnQ-L2-q0R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="EvO-Nv-CIm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJN-YK-H7k" secondAttribute="trailing" constant="21" id="IGi-yS-NLL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yJN-YK-H7k" secondAttribute="trailing" constant="21" id="IwB-IG-Dcy"/>
                             <constraint firstItem="7pe-AZ-plt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="LH0-AH-hhm"/>
                             <constraint firstItem="k5t-aE-vsp" firstAttribute="leading" secondItem="7pe-AZ-plt" secondAttribute="trailing" constant="10" id="MK2-bC-hhi"/>
                             <constraint firstItem="k5t-aE-vsp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="P4u-Wv-LjK"/>
                             <constraint firstItem="aae-07-U1M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="SQn-0f-Ldf"/>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="VML-4c-TZw"/>
                             <constraint firstItem="jnQ-L2-q0R" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="XSs-QX-QOR"/>
                             <constraint firstItem="7pe-AZ-plt" firstAttribute="leading" secondItem="jnQ-L2-q0R" secondAttribute="trailing" constant="10" id="Xsd-pc-FHY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gBD-8M-Rla" secondAttribute="trailing" constant="21" id="aJv-an-jiH"/>
-                            <constraint firstItem="yJN-YK-H7k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cNr-ku-SaX"/>
-                            <constraint firstItem="yJN-YK-H7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="f8b-ys-z4A"/>
-                            <constraint firstItem="yJN-YK-H7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="hAi-P9-8G5"/>
-                            <constraint firstItem="yJN-YK-H7k" firstAttribute="top" secondItem="aae-07-U1M" secondAttribute="bottom" constant="72" id="mhZ-aO-sFi"/>
+                            <constraint firstItem="yJN-YK-H7k" firstAttribute="top" secondItem="aae-07-U1M" secondAttribute="bottom" constant="20" id="cK7-jJ-JiM"/>
                             <constraint firstItem="gBD-8M-Rla" firstAttribute="top" secondItem="hLQ-oy-Nl3" secondAttribute="bottom" constant="2" id="pVj-OQ-hc9"/>
                             <constraint firstItem="hLQ-oy-Nl3" firstAttribute="top" secondItem="k5t-aE-vsp" secondAttribute="bottom" constant="34" id="ryj-K9-7fr"/>
                             <constraint firstItem="gBD-8M-Rla" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="xQ2-Hk-kfw"/>
